@@ -112,13 +112,12 @@ footer {
 
 /* MAIN PAGE */
 .excalibur {
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 100%;
     z-index: 2;
-  }
-  
-  .sub-container {
+}
+    .sub-container {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -224,11 +223,11 @@ footer {
   }
   .all_events {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
   }
   .open_event {
-    width: 50%;
+    width: 40%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -237,7 +236,12 @@ footer {
     padding: 10px;
     
 }
-
+.one_event h1:hover {
+    color: #74DFEE; 
+}
+.one_event h1 {
+    transition: color 0.3s;
+}
 .open_event h2 {
     transition: color 0.3s;
 }
@@ -254,6 +258,9 @@ footer {
 }
 .open_event h2 {
     font-size: 50px;
+}
+.one_event.selected h1 {
+    color: #74DFEE;
 }
 
 .inner_text {
