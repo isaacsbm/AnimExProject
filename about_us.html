@@ -96,6 +96,10 @@
             margin: 20px;
             vertical-align: middle;
             overflow: auto;
+            /*this did weird, gotta fiddle with it. want pic from abparent to 
+            center in empty space...
+            display: flex;
+            justify-content: center;*/
         }
         .abparent{          
             text-align: justify;
@@ -107,7 +111,11 @@
             float: right;
             width: 50%;
             /*box-shadow: 5px 7px 3px grey;*/
-            vertical-align: middle;
+           vertical-align: middle;
+           /* this did what i wanted for pic, but defs don't want 
+           that for the text...
+           display: flex;
+           justify-content: center;*/
         }
         .abchild{
             margin: 20px;
@@ -118,9 +126,18 @@
             border-radius: 10px;
             padding: 10px;
         }
-        #pic,#pic2{
-        border-radius: 10px;
-        padding: 10px;
+        #bipic, #hjpic{
+        /*border-radius: 10px;
+        padding: 10px;*/
+        position: relative;
+        top: 15px;
+        left: 80px;
+        }
+        #bipic{
+            filter: drop-shadow(rgb(163, 100, 111) 5px 10px 5px);
+        }
+        #hjpic{
+            filter: drop-shadow(rgb(20, 50, 91) 5px 10px 5px);
         }
 
     </style>
@@ -151,13 +168,14 @@
         </div>
         <!-- BODY -->
         <div class="abbody">
-            <!-- placeholder img-->
+            
             <img src="images\Brittany.png"
                  alt="Unicorn"
                  title="Brittany"
                  height="400px"
-                 width="40%"
-                 id="pic"/>
+                 width="30%"
+                 id="bipic"/>
+            
             <div class="abparent">
                 <h2>Brittany</h2>
                 <br />
@@ -188,13 +206,14 @@
         </div>
     </div>
     <div class="abbody">
-        <!--placeholderimg-->
+        
         <img src="images\Holley.png"
              alt="Raven"
              title="Holley"
              height="400px"
-             width="40%"
-             id="pic2"/>
+             width="30%"
+             id="hjpic"/>
+        
         <div class="abparent">
             <h2>Holley</h2>
             <br />
