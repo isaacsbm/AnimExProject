@@ -12,6 +12,10 @@
 		padding: 10px;
 		border: 2px solid #215d65;
 	}
+	.container{
+		height: 100%;
+		width: 100%;
+	}
 	</style>
 </head>
 <body>
@@ -38,8 +42,8 @@
                 </a>
             </div>
         </div>
-		
-	<section>
+	
+	
 	<table>
 		<?php
 			$dsn = 
@@ -55,12 +59,12 @@
 			}
 		?>
 	</table>
-	</section>
-	</div>
+	
+</div>
 	<footer>
-		<h2>
+		<h3>
              <a href="./visitorlog.php">Visitors</a>
-        </h2> 
+        </h3> 
 		<p>Content Creator: Holley & Brittany</p>
     </footer>
 </body>
