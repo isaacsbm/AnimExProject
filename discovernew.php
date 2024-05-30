@@ -107,16 +107,16 @@
  
 			$db = new PDO($dsn, $username, $password);
 			$imgpath = $db->query('SELECT imgpath FROM animes');
-			$title = $db->query('SELECT title FROM animes');
+			$title = $db->query('SELECT * FROM animes');
 			$summary = $db->query('SELECT descrip FROM animes');
 			$genres = $db->query('SELECT genre FROM animes');
 			
-			foreach($title as animes){
+			foreach($title as $animes){
 			echo '	
             <div class="cardcontainer">
                 <div class="card"> 
                     <div class="cardfront">
-                        <img src="images\AnimeImages\{$imgpath}"
+                        <img src="images\AnimeImages\". {$imgpath}
                         alt="{$title}"
                         title="{$title}"
                         height="100%"
