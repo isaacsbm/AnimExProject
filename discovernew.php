@@ -106,38 +106,35 @@
 			$password = 'natmurs';
  
 			$db = new PDO($dsn, $username, $password);
-			$imgpath = $db->query('SELECT imgpath FROM animes');
 			$title = $db->query('SELECT * FROM animes');
-			$summary = $db->query('SELECT descrip FROM animes');
-			$genres = $db->query('SELECT genre FROM animes');
 			
 			foreach($title as $animes){
-			echo '	
-            <div class="cardcontainer">
-                <div class="card"> 
-                    <div class="cardfront">
-                        <img src="images\AnimeImages\". {$imgpath}
-                        alt="{$title}"
-                        title="{$title}"
-                        height="100%"
-                        width="100%"
+			echo "
+            <div class='cardcontainer'>
+                <div class='card'> 
+                    <div class='cardfront'>
+                        <img src='images/AnimeImages/'". $animes['imgpath'] .
+                        "alt='" . $animes['title'] . "'
+                        title='" . $animes['title'] . "'
+                        height='100%'
+                        width='100%'
                      />
                     </div>
 
-                    <div class="cardback">
-                        <h4>{$title}</h4>
-                        <p>
-						{$summary}
-                        </p>
-                        <div class="genre">
+                    <div class='cardback'>
+                        <h4>" . $animes['title'] . "</h4>
+                        <p>"
+						. $animes['summary'] . 
+                        "</p>
+                        <div class='genre'>
                             <h5>Genres</h5>
-                            <ul class="list">
-								<li>{$genres}</li>
+                            <ul class='list'>
+								<li>" . $animes['genres'] . "</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-            </div>'
+            </div>"
 			}
 			?>
 		</div>
