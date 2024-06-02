@@ -113,8 +113,8 @@
             <div class='cardcontainer'>
                 <div class='card'> 
                     <div class='cardfront'>
-                        <img src='images/AnimeImages/'". $animes['imgpath'] .
-                        "alt='" . $animes['title'] . "'
+                        <img src='images/AnimeImages/". $animes['imgpath'] ."'
+                        alt='" . $animes['title'] . "'
                         title='" . $animes['title'] . "'
                         height='100%'
                         width='100%'
@@ -129,7 +129,7 @@
                         <div class='genre'>
                             <h5>Genres</h5>
                             <ul class='list'>
-								<li>" . $animes['genres'] . "</li>
+								<li>" . $animes['genre'] . "</li>
                             </ul>
                         </div>
                     </div>
