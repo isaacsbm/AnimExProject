@@ -9,13 +9,11 @@
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $visitor_name = $_POST['visitor_name'];
-
             // Database connection details
             $dsn = 'mysql:host=cssgate.insttech.washington.edu;dbname=hnjones';
             $username = 'hnjones';
             $password = 'natmurs';
 
-            try {
                 // Create a PDO object
                 $db = new PDO($dsn, $username, $password);
 
@@ -28,9 +26,6 @@
                 // Redirect to the about_us.html page
                 header("Location: about_us.html");
                 exit();
-            } catch (PDOException $e) {
-                echo "<h2>Error: " . $e->getMessage() . "</h2>";
-            }
         }
     ?>
 </body>
