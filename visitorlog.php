@@ -84,7 +84,7 @@
 			$visitors = $db->query('SELECT * FROM visitor');
 			foreach ($visitors as $visitor) {
 			echo "<div class='imgcont'>
-				<img src='images\logo.png' id='logo2'/>
+				<img src='images\logo3.png' id='logo'/>
 			<div class='log'>". $visitor['visitor_name'] . 
 					"</div>
 					</div>"; 
