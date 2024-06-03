@@ -42,6 +42,24 @@
                                 exit();
                             }
                             ?>
+       
+            $visitor_name = $_POST['visitor_name'];
+            // Database connection details
+            $dsn = 'mysql:host=cssgate.insttech.washington.edu;dbname=hnjones';
+            $username = 'hnjones';
+            $password = 'natmurs';
+
+                // Create a PDO object
+                $db = new PDO($dsn, $username, $password);
+
+                // Prepare and execute the query
+                $query = "INSERT INTO visitors VALUES ('$visitor_name')";
+                $insert_count = $db ->exec($query)
+
+                // Redirect to the about_us.html page
+                header("Location: about_us.html");
+                exit();
+    ?>
                         </form>
                     </div>
                 </div>
