@@ -51,7 +51,7 @@
         <div class="header">
             <div class="title">
                 <h1>
-                    <a href="./title.html">AnimeEx</a>
+                    <a href="./titlephp.php">AnimeEx</a>
                     </h1>
             </div>
             <div class="links">
