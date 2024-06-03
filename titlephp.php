@@ -23,6 +23,26 @@
                             <label for="visitor_name">Name:</label>
                             <input type="text" id="visitor_name" name="visitor_name" required maxlength="8">
                             <button type="submit">Submit</button>
+                            <?php
+            $visitor_name = $_POST['visitor_name'];
+            // Database connection details
+            $dsn = 'mysql:host=cssgate.insttech.washington.edu;dbname=hnjones';
+            $username = 'hnjones';
+            $password = 'natmurs';
+
+                // Create a PDO object
+                $db = new PDO($dsn, $username, $password);
+
+                // Prepare and execute the query
+                $query = "INSERT INTO visitors (name) VALUES (:visitor_name)";
+                $stmt = $db->prepare($query);
+                $stmt->bindParam(':visitor_name', $visitor_name);
+                $stmt->execute();
+
+                // Redirect to the about_us.html page
+                header("Location: about_us.html");
+                exit();
+    ?>
                         </form>
                     </div>
                 </div>
