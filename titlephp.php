@@ -26,7 +26,7 @@
                             <?php
                             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 $visitor_name = $_POST['visitor_name'];
-                                // Database connection details
+                                // Database connection details 
                                 $dsn = 'mysql:host=cssgate.insttech.washington.edu;dbname=hnjones';
                                 $username = 'hnjones';
                                 $password = 'natmurs';
