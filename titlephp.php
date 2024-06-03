@@ -92,10 +92,9 @@
                                 $db = new PDO($dsn, $username, $password);
                                 // Prepare and execute the query
                                 $query = "INSERT INTO visitors VALUES ('$visitor_name')";
-                                $insert_count = $db->exec($query);
-
-                                //echo(insert)
-
+                                $stmt = $db->prepare($query);
+                                $stmt->bindParam(':visitor_name', $visitor_name);
+                                $stmt->execute();
                                 // Redirect to the about_us.html page
                                 header("Location: visitorlog.php");
                                 exit();
