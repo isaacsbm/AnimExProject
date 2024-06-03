@@ -11,17 +11,26 @@
 		margin: 20px;
 		padding: 20px;
 		border-collapse: collapse;
+		
+	}
+	th, td {
+		border:2px solid rgba(68, 186, 202);
+		font-size: 22pt;
+		text-align: center;
+		margin: 10px;
+		padding: 10px;
 		background: rgba(33, 93, 101, 0.5);
 	}
-	.log{
-		position:absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		padding: 10px;
-		font-size: 20pt;
+	 .log{
+		border:2px solid #44baca;
+		font-size: 22pt;
 		text-align: center;
-	}
+		margin: 10px;
+		padding: 10px;
+		background: rgba(33, 93, 101, 0.5);
+		border-radius: 10px 30px 10px 30px;
+		float: left;
+	 }
 	.container{
 		height: 100%;
 		width: 100%;
@@ -31,17 +40,6 @@
 		margin: 10px;
 		padding: 20px;
 		text-align: center;
-	}
-	.imgcont{
-		position: relative;
-		display: inline-block;
-		width: 200px;
-		height: 200px;
-		margin:20px;
-	}
-	#logo {
-		height: 200px;
-		width: 200px;
 	}
 	</style>
 </head>
@@ -73,7 +71,7 @@
 	<h2>Welcome!</h2>
 	<h3>Thank you for visiting our site!</h3>
 	
-	
+
 		<?php
 			$dsn = 
 				'mysql:host=cssgate.insttech.washington.edu;dbname=hnjones';
@@ -83,11 +81,8 @@
 			$db = new PDO($dsn, $username, $password); 
 			$visitors = $db->query('SELECT * FROM visitor');
 			foreach ($visitors as $visitor) {
-			echo "<div class='imgcont'>
-				<img src='images\logo.png' id='logo2'/>
-			<div class='log'>". $visitor['visitor_name'] . 
-					"</div>
-					</div>"; 
+			echo "<div class='log'>". $visitor['visitor_name'] . 
+					"</div>"; 
 			}
 		?>
 	
