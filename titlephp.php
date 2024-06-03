@@ -91,11 +91,29 @@
                                 // Create a PDO object
                                 $db = new PDO($dsn, $username, $password);
                                 // Prepare and execute the query
-                                $query = "INSERT INTO visitors (vistor_name) VALUES (:visitor_name)";
-                               // $query = "INSERT INTO visitors VALUES ('$visitor_name')";
+                                $query = "INSERT INTO visitor (visitor_name) VALUES (:visitor_name)";
+                               // $query = "INSERT INTO visitor VALUES ('$visitor_name')";
                                 $stmt = $db->prepare($query);
                                 $stmt->bind_param(':visitor_name', $visitor_name);
                                 $stmt->execute();
+
+                               /* <?php 
+                                $visitor_name = $_POST['visitor_name'];
+
+                                echo $visitor_name; 
+ 
+                        $dsn = 
+                        'mysql:host=cssgate.insttech.washington.edu;dbname=hnjones';
+                        $username = 'hnjones';
+                        $password = 'natmurs';
+// creates PDO object
+                    $db = new PDO($dsn, $username, $password); 
+                    $query = "INSERT INTO visitor
+ VALUES
+('$visitor_name')";
+$insert_count = $db->exec($query);
+//echo $insert_count;
+?>*/
                                 // Redirect to the about_us.html page
                                 
                                 header("Location: visitorlog.php");
