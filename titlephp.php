@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Home Page</title>
+    <link rel="icon" href="images/prinmask.ico">
     <style>
     /* Popup */
         .popup-container {
@@ -80,19 +81,39 @@
                             <button type="submit">Submit</button>
                             <?php
                             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                $visitor_name = $_POST['visitor_name'];
+                               // $visitor_name = $_POST['visitor_name'];
                                 // Database connection details
-                                $dsn = 'mysql:host=cssgate.insttech.washington.edu;dbname=hnjones';
-                                $username = 'hnjones';
-                                $password = 'natmurs';
+                               // $dsn = 'mysql:host=cssgate.insttech.washington.edu;dbname=hnjones';
+                                //$username = 'hnjones';
+                                //$password = 'natmurs';
                                 // Create a PDO object
-                                $db = new PDO($dsn, $username, $password);
+                               // $db = new PDO($dsn, $username, $password);
                                 // Prepare and execute the query
-                                $query = "INSERT INTO visitors (vistor_name) VALUES (:visitor_name)";
-                                $stmt = $db->prepare($query);
-                                $stmt->bind_param('$visitor_name', $visitor_name);
-                                $stmt->execute();
-                                // Redirect to the about_us.html pages
+                               // $query = "INSERT INTO visitor (visitor_name) VALUES (:visitor_name)";
+                               // $query = "INSERT INTO visitor VALUES ('$visitor_name')";
+                               // $stmt = $db->prepare($query);
+                                //$stmt->bind_param(':visitor_name', $visitor_name);
+                                //$stmt->execute();
+
+                               
+                                $visitor_name = $_POST['visitor_name'];
+
+                                echo $visitor_name; 
+ 
+                        $dsn = 
+                        'mysql:host=cssgate.insttech.washington.edu;dbname=hnjones';
+                        $username = 'hnjones';
+                        $password = 'natmurs';
+// creates PDO object
+                    $db = new PDO($dsn, $username, $password); 
+                    $query = "INSERT INTO visitor
+                    VALUES
+                    ('$visitor_name')";
+                    $insert_count = $db->exec($query);
+                    echo $insert_count;
+                        
+                                // Redirect to the about_us.html page
+                                
                                 header("Location: visitorlog.php");
                                 exit();
                             }
