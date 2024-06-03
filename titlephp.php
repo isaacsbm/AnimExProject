@@ -82,7 +82,7 @@
                             <input type="text" id="visitor_name" name="visitor_name" required maxlength="8">
                             <button type="submit">Submit</button>
                             <?php
-                            //if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                // $visitor_name = $_POST['visitor_name'];
                                 // Database connection details
                                // $dsn = 'mysql:host=cssgate.insttech.washington.edu;dbname=hnjones';
@@ -118,7 +118,7 @@
                                 
                                 header("Location: visitorlog.php");
                                 exit();
-                            //}
+                            }
                             ?>
                         </form>
                     </div>
