@@ -24,6 +24,7 @@
                             <input type="text" id="visitor_name" name="visitor_name" required maxlength="8">
                             <button type="submit">Submit</button>
                             <?php
+       
             $visitor_name = $_POST['visitor_name'];
             // Database connection details
             $dsn = 'mysql:host=cssgate.insttech.washington.edu;dbname=hnjones';
@@ -35,9 +36,7 @@
 
                 // Prepare and execute the query
                 $query = "INSERT INTO visitors VALUES ('$visitor_name')";
-                $stmt = $db->prepare($query);
-                $stmt->bindParam(':visitor_name', $visitor_name);
-                $stmt->execute();
+                $insert_count = $db ->exec($query)
 
                 // Redirect to the about_us.html page
                 header("Location: about_us.html");
