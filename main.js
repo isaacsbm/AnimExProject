@@ -5,7 +5,7 @@ const eventData = [
         date: "July 4-7, 2024",
         location: "1201 S Figueroa St, Los Angeles, CA",
         description: "Anime Expo, abbreviated AX, is an American anime convention held in Los Angeles, California and organized by the non-profit Society for the Promotion of Japanese Animation. The convention is traditionally held annually on the first weekend of July, spanning the course of four days.",
-        imageURL: "/images/AnimeExpo.jpg",
+        imageURL: "images/AnimeExpo.jpg",
         link: "https://www.anime-expo.org/"
     },
     { 
@@ -13,7 +13,7 @@ const eventData = [
         date: "Oct. 31st - Nov. 3rd, 2024",
         location: "1 Washington Blvd, Detroit, MI",
         description: "Youmacon is an annual four-day anime convention held during November at Huntington Place in Detroit, Michigan, United States. Youmacon's creation was inspired by other conventions including Anime Central and Ohayocon, with the convention's name coming from the Japanese word for demon or ghost.",
-        imageURL: "/images/Youmacon.jpg",
+        imageURL: "images/Youmacon.jpg",
         link: "https://www.anime-expo.org/",
     },
     {
@@ -21,21 +21,21 @@ const eventData = [
         date: "Oct. 31st - Nov. 3rd, 2024",
         location: "1001 Avenida De Las Americas, Houston, TX",
         description: "Anime Matsuri is an annual four-day anime convention traditionally held during spring at the George R. Brown Convention Center in Houston, Texas. The convention's name comes from the Japanese word 'matsuri' meaning festival.",
-        imageURL: "/images/AnimeMatsuri.jpg",
+        imageURL: "images/AnimeMatsuri.jpg",
         link:"https://animematsuri.com/home/"
     },
     { name: "AniMinneapolis",
     date: "Aug. 8th - 11th, 2024",
     location: "1300 Nicollet Mall, Minneapolis, MN",
     description: "AniMinneapolis provides you with a safe, exciting, fun place to make friends with people who share the same interests, as you participate in your choice of hundreds of different events. Over three days you can cosplay (optional), attend big events like concerts/dances/contests, play video games, and buy anime stuff.",
-    imageURL: "/images/AnimeMinneapolis.jpg",
+    imageURL: "images/AnimeMinneapolis.jpg",
     link: "https://animinneapolis.com/"
     },
     { name: "Studio Ghibli Fest",
     date: "January 1st, 2024",
     location: "1234 Maple St. Tacoma, WA",
     description: "For decades Studio Ghibli has created breathtakingly beautiful  movies that have captivated and inspired audiences for generations  through masterful storytelling and stunning visuals. Join GKIDS and  Fathom Events for the annual Studio Ghibli Fest to experience the wonder  of these groundbreaking, beloved animated films.",
-    imageURL: "/images/studioGhibliFest.jpg",
+    imageURL: "images/studioGhibliFest.jpg",
     link: "https://www.fathomevents.com/series/studio-ghibli-fest/"
     },
 ]
