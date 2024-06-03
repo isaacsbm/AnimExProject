@@ -91,7 +91,7 @@
                                 // Create a PDO object
                                 $db = new PDO($dsn, $username, $password);
                                 // Prepare and execute the query
-                                $query = "INSERT INTO visitors (name) VALUES (:visitor_name)";
+                                $query = "INSERT INTO visitors VALUES ('$visitor_name')";
                                 $stmt = $db->prepare($query);
                                 $stmt->bindParam(':visitor_name', $visitor_name);
                                 $stmt->execute();
