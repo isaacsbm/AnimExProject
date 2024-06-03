@@ -96,7 +96,7 @@
                                 $stmt->bindParam(':visitor_name', $visitor_name);
                                 $stmt->execute();
                                 // Redirect to the about_us.html page
-                                header("Location: about_us.html");
+                                header("Location: vistorlog.php");
                                 exit();
                             }
                             ?>
