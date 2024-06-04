@@ -269,6 +269,7 @@ footer {
     justify-content: space-between;
 
 }
+
 .open_img{
     max-width: 75px;
     border-radius: 10px;
@@ -278,7 +279,7 @@ footer {
 .title_img {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start
+    align-items: flex-start;
 }
 .inside_title_img {
     display: flex;
