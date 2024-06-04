@@ -31,7 +31,7 @@ const eventData = [
     imageURL: "images/AnimeMinneapolis.jpg",
     link: "https://animinneapolis.com/"
     },
-    { name: "Studio Ghibli Fest",
+    { name: "Ghibli Fest",
     date: "January 1st, 2024",
     location: "1234 Maple St. Tacoma, WA",
     description: "For decades Studio Ghibli has created breathtakingly beautiful  movies that have captivated and inspired audiences for generations  through masterful storytelling and stunning visuals. Join GKIDS and  Fathom Events for the annual Studio Ghibli Fest to experience the wonder  of these groundbreaking, beloved animated films.",
