@@ -43,6 +43,9 @@
 		height: 200px;
 		width: 200px;
 	}
+	.vish3{
+		text-shadow: none;
+	}
 	</style>
 </head>
 <body>
@@ -71,7 +74,7 @@
         </div>
 	<div class="content">
 	<h2>Welcome!</h2>
-	<h3>Thank you for visiting our site!</h3>
+	<h3 class="vish3">Thank you for visiting our site!</h3>
 	
 	
 		<?php
@@ -93,13 +96,14 @@
 	
 	</div>
 	
-</div>
+
 	<footer>
 		<h3>
              <a href="./visitorlog.php">Visitors</a>
         </h3> 
 		<p>Content Creator: Holley & Brittany</p>
     </footer>
+	</div>
 </body>
  <script src="./main.js"></script>
  </html>
